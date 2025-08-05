@@ -1,7 +1,7 @@
 // Day 1 Challenge 
 
 console.log("===============");
-console.log("Day 1 Challenge");
+console.log("Day 1 Challenge Part 1");
 console.log("===============");
 
 function sortList(arr) {
