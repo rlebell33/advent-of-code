@@ -1,25 +1,26 @@
 // Day 1 Challenge 
 
 console.log("===============");
-console.log("Day 1 Challenge");
+console.log("Day 1 Challenge Part 2");
 console.log("===============");
 
 function sortList(arr) {
     return arr.sort((a, b) => (a < b ? -1 : 1));
 }
 
-function findTotalDistance(arr1, arr2) {
-    var totalDistance = 0;
+function findSimilarity(arr1, arr2) {
+    var similarity = 0;
     var array1 = sortList(arr1);
     var array2 = sortList(arr2);
 
-    array1.forEach((num, index) => {
-        totalDistance += Math.abs(array2[index] - num);
+    array1.forEach((num) => {
+        var occurrences = array2.filter((num2) => num === num2).length;
+        if (occurrences > 0) {
+            similarity += num * occurrences;
+        }
     });
-
-    console.log('totalDistance: ', totalDistance);
+    console.log("Total Similarity: " + similarity);
 }
-
 
 var arrayOne = [56208,
                 52621,
@@ -2023,4 +2024,5 @@ var arrayTwo = [95668,
                 49664,
                 87526]
 
-findTotalDistance(arrayOne, arrayTwo);
+
+findSimilarity(arrayOne, arrayTwo);
