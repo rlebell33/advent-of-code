@@ -35,6 +35,14 @@ function findReportSafeCount(arr) {
     return count;
 }
 
+// Example input
+// var input = ['7 6 4 2 1',
+// '1 2 7 8 9',
+// '9 7 6 2 1',
+// '1 3 2 4 5',
+// '8 6 4 4 1',
+// '1 3 6 7 9']
+
 var input = ['22 25 27 28 30 31 32 29',
 '72 74 75 77 80 81 81',
 '52 53 55 58 59 63',
